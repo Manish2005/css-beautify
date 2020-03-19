@@ -1,0 +1,43 @@
+main {
+  .title {
+    margin-bottom: 50px;
+  }
+
+  padding-top: 50px;
+
+  .app-root {
+    padding: 3rem 1.5rem;
+    text-align: center;
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .submit-btn-wrapper {
+      margin-top: 40px;
+    }
+
+    .result {
+      text-align: center;
+
+      .hex-code {
+        font-weight: bold;
+        margin: 20px 0;
+      }
+
+      .example {
+        display: inline-block;
+        width: 200;
+        height: 150px;
+      }
+    }
+  }
+}
