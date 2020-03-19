@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <main role="main" class="container">
-  <div class="app-root">
+  <div class="app-root card">
     <h1 class="title">RGB to HEX Converter</h1>
 
     <form [formGroup]="form">
@@ -40,10 +40,23 @@
     </form>
 
     <div class="result" *ngIf="hexCode">
-      <div class="hex-code">{{hexCode}}</div>
+      <div class="hex-code">{{hexCode | uppercase}}</div>
       <div class="row">
         <div class="col-sm-6 col-md-4 offset-sm-3 offset-md-4 example" [ngStyle]="{backgroundColor: hexCode}"></div>
       </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <h3>What does this RGB to Hex converter do?</h3>
+      <p>
+        It takes input in the form of values for Red, Green and Blue ranging from 0 to 255 and then converts those
+        values to a hexadecimal string that can be used to specify color in html/css code. Photo editing software
+        usually represents color in RGB and therefore if you would like to use the colors you use in your photo editing
+        software as the background of your html element then you will have to get the hexadecimal representation of the
+        RGB values. This tool allows you to get those values.
+      </p>
     </div>
   </div>
 
