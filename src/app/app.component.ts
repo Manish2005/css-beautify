@@ -11,7 +11,7 @@ declare const CodeMirror;
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  title = 'rgb-hex-convertor';
+  title = 'css-beautifier';
   form: FormGroup;
   hexCode: string;
 

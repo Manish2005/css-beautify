@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('rgb-hex-convertor app is running!');
+    expect(page.getTitleText()).toEqual('css-beautifier app is running!');
   });
 
   afterEach(async () => {
