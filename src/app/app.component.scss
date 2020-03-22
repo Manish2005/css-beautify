@@ -17,6 +17,12 @@ main {
     .input,
     .output {
       border: 1px solid #ccc;
+
+      .CodeMirror {
+        .CodeMirror-placeholder {
+          color: #aaa;
+        }
+      }
     }
 
     .input {

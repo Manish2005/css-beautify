@@ -33,7 +33,8 @@
             ],
             "scripts": [
               "./node_modules/codemirror/lib/codemirror.js",
-              "./node_modules/codemirror/mode/css/css.js"
+              "./node_modules/codemirror/mode/css/css.js",
+              "./node_modules/codemirror/addon/display/placeholder.js"
             ]
           },
           "configurations": {

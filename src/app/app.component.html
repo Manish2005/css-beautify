@@ -2,18 +2,16 @@
 
 <main role="main" class="container">
   <div class="app-root card">
-    <h1 class="title">CSS Beautify</h1>
-
     <form>
       <h3>Beautify your CSS code: </h3>
       <div class="input">
-        <textarea #input></textarea>
+        <textarea #input placeholder="Type / Paste your CSS code here..."></textarea>
       </div>
       <div class="submit-btn-wrapper" id=submit-button>
         <button #submitButton type="submit" class="btn btn-primary" (click)="beautify()">Beautify Now</button>
       </div>
       <div class="output">
-        <textarea #output></textarea>
+        <textarea #output placeholder="Formatted code will be shown here..."></textarea>
       </div>
     </form>
 

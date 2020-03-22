@@ -21,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/css-beautify' }],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/css-beautifier' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
