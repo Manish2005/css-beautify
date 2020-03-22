@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/codemirror/lib/codemirror.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/codemirror/lib/codemirror.js",
+              "./node_modules/codemirror/mode/css/css.js"
+            ]
           },
           "configurations": {
             "production": {

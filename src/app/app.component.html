@@ -2,60 +2,36 @@
 
 <main role="main" class="container">
   <div class="app-root card">
-    <h1 class="title">RGB to HEX Converter</h1>
+    <h1 class="title">CSS Beautify</h1>
 
-    <form [formGroup]="form">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 row">
-          <div class="col-sm-4">
-            <div class="input-group mb-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text">R</div>
-              </div>
-              <input type="number" min="0" max="255" class="form-control" placeholder="0 - 255" formControlName="red">
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="input-group mb-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text">G</div>
-              </div>
-              <input type="number" min="0" max="255" class="form-control" placeholder="0 - 255" formControlName="green">
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="input-group mb-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text">B</div>
-              </div>
-              <input type="number" min="0" max="255" class="form-control" placeholder="0 - 255" formControlName="blue">
-            </div>
-          </div>
-        </div>
+    <form>
+      <div class="input">
+        <textarea #input></textarea>
       </div>
-
-      <div class="col-auto submit-btn-wrapper">
-        <button type="submit" class="btn btn-primary mb-2" (click)="convertToHex()">Convert to HEX</button>
+      <div class="submit-btn-wrapper" id=submit-button>
+        <button #submitButton type="submit" class="btn btn-primary" (click)="beautify()">Beautify Now</button>
+      </div>
+      <div class="output">
+        <textarea #output></textarea>
       </div>
     </form>
 
-    <div class="result" *ngIf="hexCode">
-      <div class="hex-code">{{hexCode | uppercase}}</div>
-      <div class="row">
-        <div class="col-sm-6 col-md-4 offset-sm-3 offset-md-4 example" [ngStyle]="{backgroundColor: hexCode}"></div>
-      </div>
-    </div>
-
-    <hr>
-
+    <br>
     <div>
-      <h3>What does this RGB to Hex converter do?</h3>
       <p>
-        It takes input in the form of values for Red, Green and Blue ranging from 0 to 255 and then converts those
-        values to a hexadecimal string that can be used to specify color in html/css code. Photo editing software
-        usually represents color in RGB and therefore if you would like to use the colors you use in your photo editing
-        software as the background of your html element then you will have to get the hexadecimal representation of the
-        RGB values. This tool allows you to get those values.
+        Enter your messy, minified, or obfuscated CSS Style Sheets into the field above to have it cleaned up and made
+        pretty. The editor above also contains helpful line numbers and syntax highlighting. There are many option to
+        tailor the beautifier to your personal formatting tastes.
+      </p>
+      <h3>When do you use</h3>
+      <p>
+        Often when writing CSS Style Sheets your indentation, spacing, and other formatting can become a bit
+        disorganized.
+        It is also common for multiple developers to work on a single project who have different formatting techniques.
+        This tool is helpful for making the formatting of a file consistent. It is also common for CSS Style Sheets to
+        be
+        minified or obfuscated. You can use this tool to make that code look pretty and readable so it is easier to
+        edit.
       </p>
     </div>
   </div>

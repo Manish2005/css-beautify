@@ -8,37 +8,32 @@ main {
 
   .app-root {
     padding: 3rem 1.5rem;
-    text-align: center;
+    margin-bottom: 50px;
 
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+    h1.title {
+      text-align: center;
     }
 
-    /* Firefox */
-    input[type=number] {
-      -moz-appearance: textfield;
+    .input,
+    .output {
+      border: 1px solid #ccc;
+    }
+
+    .input {
+      .CodeMirror {
+        height: 250px;
+      }
+    }
+
+    .output {
+      .CodeMirror {
+        height: 350px;
+      }
     }
 
     .submit-btn-wrapper {
-      margin-top: 40px;
-    }
-
-    .result {
+      margin: 30px 0;
       text-align: center;
-
-      .hex-code {
-        font-weight: bold;
-        margin: 20px 0;
-      }
-
-      .example {
-        display: inline-block;
-        width: 200;
-        height: 150px;
-      }
     }
   }
 }
