@@ -24,7 +24,9 @@ jobs:
 
       # Build
       - name: Run Build
-        run: npm run build:prod
+        run: |
+          npm run build:prod
+          cd dist
 
       # Deploy
       - name: Deploy via SCP
