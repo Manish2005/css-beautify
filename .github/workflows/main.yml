@@ -15,6 +15,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - continue-on-error: false
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
@@ -32,8 +33,17 @@ jobs:
         with:
           name: build-artifacts
           path: ./css-beautifier
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - continue-on-error: false
+      - name: Download artifact
+        uses: actions/download-artifact@v1.0.0
+        with:
+          name: build-artifacts
 
-      # Deploy
+      - run: mv ./build-artifacts ./css-beautifier
+        
       - name: Deploy via SCP
         uses: appleboy/scp-action@master
         with:
