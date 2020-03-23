@@ -3,8 +3,6 @@ name: Build and Deploy
 on:
   push:
     branches: [master]
-#  pull_request:
-#    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,6 +30,7 @@ jobs:
         with:
           name: build-artifacts
           path: ./dist/css-beautifier
+
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -39,7 +38,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v1.0.0
         with:
-          name: build-artifacts
+          name: "build-artifacts"
 
       - run: mv ./build-artifacts ./css-beautifier
         
